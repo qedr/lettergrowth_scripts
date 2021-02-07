@@ -19,12 +19,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      echo-input:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - uses: actions/github-script@v3
-            with:
-              script: |
-                const script = require(`${process.env.GITHUB_WORKSPACE}/script.js`)
-                console.log(script())
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: node script.js
