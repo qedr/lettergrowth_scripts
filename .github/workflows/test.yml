@@ -21,4 +21,5 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        using: 'node12'
         run: node script.js
